@@ -191,5 +191,43 @@ _____
 
 Las consultas que reciban datos ingresados por el usuario deberán utilizar PreparedStatement.
 No se permitirá construir consultas SQL concatenando directamente los datos ingresados por el usuario.
+_____
+### Estructura del Proyecto
+_____
+```
+src/
+├── main/java/lab8/
+     │          └── Servicio/
+     │          │    └── interfaces/
+     │          │    ├── IMenuBiblioteca.java
+     │          │    ├── IMenuEjemplar.java
+     │          │    ├── IMenuLibro.java
+     │          │    ├── IMenuOpcion.java
+     │          │    ├── IMenuPrestamo.java
+     │          │    ├── IMenuSocio.java
+     │          │    ├── IMenuBiblioteca.java
+     │          └── connection/                        
+     │          │    └── ConexionMySql.java   # Configuración para conectar con el controlador de bd 
+     │          └── Test/                        
+     │          │    └── App.java
+     │          └── control/                  # Clases de control
+     │          │    ├── Menu.java
+     │          │    ├── MenuEjemplar.java
+     │          │    ├── MenuLibro.java
+     │          │    ├── MenuPrestamo.java
+     │          │    └── MenuSocio.java
+     │          └── modelo/                   # Entidades 
+     │          │    ├── Ejemplar.java            
+     │          │    ├── EstadoEjemplar.java                     
+     │          │    ├── Libro.java                   
+     │          │    ├── Prestamo.java              
+     │          │    └── Socio.java               
+     │          └── util/ 
+     │                 └── Verificación.java          
+     └── resources/
+           └── Biblioteca_DB.sql
+
+```
+
 
 
